@@ -57,7 +57,7 @@ AudioIngester:
 
 The `audio_ingester` command provides functionality for parsing and validating audio file metadata.
 
-### Parsing a File
+### Parsing a File (or a Folder)
 
 To parse a single audio file, use the `parse` command:
 
