@@ -1,0 +1,13 @@
+AudioIngester:
+  AllowedMusicMimeTypes:
+    - "audio/x-wav"
+  FileHeaders:
+    "audio/x-wav":
+      - format
+      - channel_count
+      - sampling_rate
+      - bit_depth
+      - byte_rate
+      - bit_rate
+  SchemaValidators:
+    "audio/x-wav": wav.xsd
