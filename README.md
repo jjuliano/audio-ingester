@@ -78,14 +78,6 @@ To parse a single audio file, use the `parse` command:
 ./bin/audio_ingester.rb parse --config=config/custom_config.yml --schema=data/schema/custom_schema.xsd --output=custom_output --skip_validation path/to/your/file.wav
 ```
 
-### Displaying the Version
-
-To display the version of the tool, use the `--version` or `-v` option:
-
-```sh
-./bin/audio_ingester.rb --version
-```
-
 ## Development
 
 ### Running Tests
@@ -93,15 +85,16 @@ To display the version of the tool, use the `--version` or `-v` option:
 To run the tests, use the following command:
 
 ```sh
-ruby -Ilib:test test/test_audio_ingester_configuration.rb
+rake test
 ```
 
 ### Code Structure
 
-- `lib/audio_ingester/configuration.rb`: Handles configuration loading and metadata extraction.
+- `lib/audio_ingester/config.rb`: Handles configuration loading and metadata extraction.
 - `lib/audio_ingester/utils/output.rb`: Contains utility methods for output directory management and file saving.
+- `lib/audio_ingester/utils/headers.rb`: Contains utility for file header probing and extraction from audio files.
+- `lib/audio_ingester/metadata.rb`: Handles metadata extraction from audio files using header extraction methods specified in the files within the `/lib/audio_ingester/metadata/` directory.
 - `lib/audio_ingester/errors.rb`: Defines custom error classes.
-- `lib/audio_ingester/metadata.rb`: Handles metadata extraction from audio files.
 - `bin/audio_ingester.rb`: The main CLI tool.
 
 ### Logging
