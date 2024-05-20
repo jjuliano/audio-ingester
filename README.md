@@ -23,8 +23,8 @@ AudioIngester is a command-line tool for parsing and processing metadata from au
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/jjuliano/audio_ingester.git
-    cd audio_ingester
+    git clone https://github.com/jjuliano/audio-ingester.git
+    cd audio-ingester
     ```
 
 2. Install the dependencies:
