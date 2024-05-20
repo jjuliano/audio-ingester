@@ -65,6 +65,13 @@ To parse a single audio file, use the `parse` command:
 ./bin/audio_ingester.rb parse path/to/your/file.wav
 ```
 
+You can also specify a folder to parse all the audio files inside the folder:
+
+```sh
+./bin/audio_ingester.rb parse path/to/your/folder/
+```
+
+
 ### Options
 
 - `--config`: Path to the configuration file. Defaults to `config/config.yml`.
